@@ -25,30 +25,25 @@ The project follows a layered architecture to keep the code clean, modular, and 
 
 ### Folder Structure
 
+```txt
 guestara-backend/
-│
-├── controllers/ # Request handling & business logic
-│ ├── category.controller.js
-│ └── item.controller.js
-│
-├── models/ # Mongoose schemas
-│ ├── category.model.js
-│ └── item.model.js
-│
-├── routes/ # API route definitions
-│ ├── category.routes.js
-│ └── item.routes.js
-│
-├── utils/ # Reusable utilities
-│ └── pricing.util.js
-│
-├── config/ # Database configuration
-│ └── db.js
-│
-├── app.js # Express app setup
-├── server.js # Server bootstrap
-├── .env # Environment variables
-└── README.md
+├── controllers/
+│   ├── category.controller.js   # Category-related business logic
+│   └── item.controller.js       # Item-related business logic
+├── models/
+│   ├── category.model.js        # Category schema (tax rules)
+│   └── item.model.js            # Item schema (pricing & availability)
+├── routes/
+│   ├── category.routes.js       # Category API routes
+│   └── item.routes.js           # Item API routes
+├── utils/
+│   └── pricing.util.js          # Pricing & tax calculation logic
+├── config/
+│   └── db.js                    # MongoDB connection
+├── app.js                       # Express app configuration
+├── server.js                    # Server bootstrap
+├── .env                         # Environment variables
+└── README.md                    # Project documentation
 
 
 ### Architectural Decisions
