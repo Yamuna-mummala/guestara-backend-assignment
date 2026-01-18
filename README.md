@@ -45,6 +45,7 @@ guestara-backend/
 ├── .env                         # Environment variables
 └── README.md                    # Project documentation
 
+```txt
 
 ### Architectural Decisions
 
