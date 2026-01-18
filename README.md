@@ -156,3 +156,15 @@ The pricing engine is responsible for calculating the final price of an item by 
 - Separation of concerns (business logic vs API logic)
 - Easy to modify pricing rules in the future
 - Avoids hardcoding tax calculations inside controllers
+
+## Tradeoffs & Simplifications
+
+Due to limited time and scope, the following tradeoffs were made intentionally:
+
+- Authentication and authorization were not implemented, as the focus was on backend data modeling and business logic
+- No role-based access (admin/user) was added to keep the API simple
+- Item-level tax overrides were not implemented; tax is inherited only from categories
+- No pagination or advanced filtering was added to listing APIs
+- Validation is kept minimal and handled mainly at the schema level
+
+These decisions allowed me to focus on correctness, clarity, and clean architecture rather than feature quantity.
