@@ -168,3 +168,17 @@ Due to limited time and scope, the following tradeoffs were made intentionally:
 - Validation is kept minimal and handled mainly at the schema level
 
 These decisions allowed me to focus on correctness, clarity, and clean architecture rather than feature quantity.
+
+
+## Written Reflections
+
+**1. Why I chose MongoDB:**  
+MongoDB was chosen for its flexibility with JSON-like documents, fast development cycle, and easy handling of hierarchical data like categories and items. Its schema-less nature allows evolving the menu and pricing logic without major migrations.
+
+**2. Three things I learned while building this:**  
+- How to design schemas with relationships (Category → Item) in MongoDB  
+- How to implement soft deletes and tax inheritance logic  
+- How to separate business logic (pricing) from controller logic using utility functions  
+
+**3. The hardest technical/design challenge:**  
+Implementing tax inheritance and pricing logic that dynamically calculates final price without storing redundant tax info in the Item schema. Ensuring updates
